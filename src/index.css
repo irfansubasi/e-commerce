@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+@layer components {
+  h1 {
+    @apply font-montserrat font-extrabold text-6xl;
+  }
+
+  h2 {
+    @apply font-montserrat font-bold text-4xl;
+  }
+
+  h3 {
+    @apply font-montserrat font-bold text-2xl;
+  }
+
+  h4 {
+    @apply font-montserrat font-medium text-xl;
+  }
+
+  h5 {
+    @apply font-montserrat font-bold text-lg;
+  }
+
+  h6 {
+    @apply font-montserrat font-semibold text-base;
+  }
+
+  .btn-text {
+    @apply font-montserrat font-bold text-base;
+  }
+
+  .mobile-menu {
+    @apply font-montserrat font-normal text-3xl;
+  }
+
+  p {
+    @apply font-montserrat font-medium text-base;
+  }
+
+  li {
+    @apply font-montserrat font-normal text-xl;
+  }
+
+  a {
+    @apply font-montserrat font-semibold text-base;
+  }
+}
