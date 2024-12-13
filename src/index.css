@@ -52,3 +52,9 @@
     @apply font-montserrat font-semibold text-base;
   }
 }
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
