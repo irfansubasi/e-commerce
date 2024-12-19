@@ -1,3 +1,3 @@
-export default function PageContent() {
-  return <div>PageContent</div>;
+export default function PageContent({ children }) {
+  return <main>{children}</main>;
 }
