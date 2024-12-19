@@ -25,17 +25,27 @@ export default function Header() {
           </li>
           <li>
             <Link className="mobile-menu font-semibold" to="/">
-              Product
+              Shop
             </Link>
           </li>
           <li>
             <Link className="mobile-menu font-semibold" to="/">
-              Pricing
+              About
+            </Link>
+          </li>
+          <li>
+            <Link className="mobile-menu font-semibold" to="/">
+              Blog
             </Link>
           </li>
           <li>
             <Link className="mobile-menu font-semibold" to="/">
               Contact
+            </Link>
+          </li>
+          <li>
+            <Link className="mobile-menu font-semibold" to="/">
+              Pages
             </Link>
           </li>
         </ul>
