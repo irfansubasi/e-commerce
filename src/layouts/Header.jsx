@@ -16,8 +16,8 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
-      <div className="navbar-solid hidden md:flex bg-primary text-white items-center justify-between">
-        <div className="navbar-contact p-3 flex items-center gap-8">
+      <div className="navbar-solid hidden md:flex bg-primary text-white items-center justify-between px-14">
+        <div className="navbar-contact py-3 flex items-center gap-8">
           <div className="flex gap-2">
             <Phone size={20} />
             <h6>(225) 555-0118</h6>
@@ -37,7 +37,7 @@ export default function Header() {
           <Facebook size={20} />
         </div>
       </div>
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between py-5 px-8 md:px-14">
         <Link to="/">
           <img className="w-28" src={logo} alt="logo" />
         </Link>
