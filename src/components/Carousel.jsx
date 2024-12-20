@@ -2,10 +2,11 @@ import {
   Carousel as ShadCarousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Button from './Button/Button';
+import { useEffect, useState } from 'react';
 
 export default function Carousel() {
   const slideContent = [
@@ -27,8 +28,34 @@ export default function Carousel() {
     },
   ];
 
+  const [api, setApi] = useState(null);
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
-    <ShadCarousel>
+    <ShadCarousel
+      className="relative"
+      setApi={setApi}
+      opts={{
+        align: 'start',
+        loop: true,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 5000,
+        }),
+      ]}
+    >
       <CarouselContent>
         {slideContent.map((item, index) => (
           <CarouselItem
@@ -50,6 +77,18 @@ export default function Carousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
+      <button
+        className="absolute top-1/2 left-0"
+        onClick={() => api?.scrollTo(current - 1)}
+      >
+        <ChevronLeft color="white" size={50} />
+      </button>
+      <button
+        className="absolute top-1/2 right-0"
+        onClick={() => api?.scrollTo(current + 1)}
+      >
+        <ChevronRight color="white" size={50} />
+      </button>
     </ShadCarousel>
   );
 }
