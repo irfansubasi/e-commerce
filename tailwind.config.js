@@ -12,6 +12,12 @@ export default {
         txt: '#252B42',
         secondTxt: '#737373',
       },
+
+      backgroundImage: {
+        heroBg1: "url('../../assets/images/hero/hero1.jpg')",
+        heroBg2: "url('../../assets/images/hero/hero2.jpg')",
+      },
+
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
       },
@@ -23,4 +29,5 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
+  safelist: ['bg-heroBg1', 'bg-heroBg2'],
 };

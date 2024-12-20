@@ -9,7 +9,7 @@
 
 @layer components {
   h1 {
-    @apply font-montserrat font-extrabold text-6xl;
+    @apply font-montserrat font-extrabold text-4xl md:text-6xl;
   }
 
   h2 {
@@ -50,6 +50,10 @@
 
   a {
     @apply font-montserrat font-semibold text-base;
+  }
+
+  .container {
+    @apply mx-auto px-16 md:px-60;
   }
 }
 
