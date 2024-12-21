@@ -53,7 +53,7 @@
   }
 
   .container {
-    @apply mx-auto px-16 md:px-60;
+    @apply mx-auto px-10 md:px-60;
   }
 }
 
