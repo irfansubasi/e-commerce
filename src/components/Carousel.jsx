@@ -62,8 +62,8 @@ export default function Carousel() {
             key={index}
             className={`h-[83vh] w-full bg-${item.bg} bg-no-repeat bg-top bg-cover flex items-center`}
           >
-            <div className="text-white text-center md:text-start">
-              <div className="flex flex-col gap-8 items-center md:items-start container">
+            <div className="text-white text-center md:text-start md:w-1/2">
+              <div className="flex flex-col gap-8 items-center md:items-start px-10 md:px-0 md:pl-60 md:ml-[43px]">
                 <h5>{item.season}</h5>
                 <h1>{item.titleLine1}</h1>
                 <h4>{item.description}</h4>
