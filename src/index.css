@@ -52,6 +52,10 @@
     @apply font-montserrat font-semibold text-base;
   }
 
+  .small {
+    @apply font-montserrat font-semibold text-sm;
+  }
+
   .container {
     @apply mx-auto px-10 lg:px-20 xl:px-40;
   }
