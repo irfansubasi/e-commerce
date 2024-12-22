@@ -13,9 +13,9 @@ export const buttonStyles = cva(
           'bg-transparent outline outline-2 text-secondary hover:bg-secondary hover:text-white rounded-full',
       },
       size: {
-        small: 'px-2 py-1 text-sm',
-        medium: 'px-4 py-2 text-base',
-        large: 'px-6 py-3 text-lg',
+        small: 'px-4 py-2 text-sm',
+        medium: 'px-6 py-4 text-base',
+        large: 'px-8 py-6 text-lg',
       },
     },
     defaultVariants: {
