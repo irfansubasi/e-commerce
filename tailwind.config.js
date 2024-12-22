@@ -11,11 +11,15 @@ export default {
         accent: '#00A1C1',
         txt: '#252B42',
         secondTxt: '#737373',
+        muted: '#BDBDBD',
+        customGreen: '#23856D',
       },
 
       backgroundImage: {
         heroBg1: "url('../../assets/images/hero/hero1.jpg')",
         heroBg2: "url('../../assets/images/hero/hero2.jpg')",
+        heroBg3: "url('../../assets/images/hero/hero3.jpg')",
+        heroBg4: "url('../../assets/images/hero/hero4.jpg')",
       },
 
       fontFamily: {
@@ -29,5 +33,5 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-  safelist: ['bg-heroBg1', 'bg-heroBg2'],
+  safelist: ['bg-heroBg1', 'bg-heroBg2', 'bg-heroBg3', 'bg-heroBg4'],
 };

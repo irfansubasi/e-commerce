@@ -1,12 +1,13 @@
 import PickCard from '@/components/PickCard';
 import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
+import ProductCard from '@/components/ProductCard';
 
 export default function HomePage() {
   return (
     <>
       <section className="carousel-section">
-        <Carousel />
+        <Carousel content={1} />
       </section>
 
       <section className="editorPick-section bg-[#FAFAFA]">
@@ -44,6 +45,31 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="products-section">
+        <div className="products-content py-20 flex flex-col gap-6 text-center container">
+          <h4 className="text-secondTxt">Featured Products</h4>
+          <h3 className="text-txt">BESTSELLER PRODUCTS</h3>
+          <p className="text-secondTxt">
+            Problems trying to resolve the conflict between
+          </p>
+          <div className="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-6 mt-12">
+            {/*'data geldiğinde burası değişecek'*/}
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
+        </div>
+      </section>
+
+      <section className="carousel-section">
+        <Carousel content={2} />
       </section>
     </>
   );
