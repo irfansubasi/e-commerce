@@ -2,6 +2,7 @@ import PickCard from '@/components/PickCard';
 import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
 import ProductCard from '@/components/ProductCard';
+import Button from '@/components/Button/Button';
 
 export default function HomePage() {
   return (
@@ -70,6 +71,31 @@ export default function HomePage() {
 
       <section className="carousel-section">
         <Carousel content={2} />
+      </section>
+
+      <section className="cta-section">
+        <div className="cta-content my-12 md:my-0 flex flex-col-reverse md:flex-row">
+          <div className="w-full md:w-1/2">
+            <img src="../assets/images/cta.png" alt="cta" className="w-full" />
+          </div>
+          <div className="flex w-full md:w-1/2 justify-center align-items">
+            <div className="p-12 md:p-40 flex flex-col gap-8 justify-center text-center md:text-start">
+              <h5 className="text-muted">SUMMER 2020</h5>
+              <h2 className="text-txt">Part of the Neural Universe</h2>
+              <h4 className="text-secondTxt">
+                We know how large objects will act, but things on a small scale.
+              </h4>
+              <div className="flex flex-col md:flex-row gap-6 items-center">
+                <Button>
+                  <span className="btn-text">BUY NOW</span>
+                </Button>
+                <Button variant="outline">
+                  <span className="btn-text">READ MORE</span>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   );
