@@ -3,6 +3,7 @@ import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
 import ProductCard from '@/components/ProductCard';
 import Button from '@/components/Button/Button';
+import BlogCard from '@/components/BlogCard';
 
 export default function HomePage() {
   return (
@@ -94,6 +95,25 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="featured-section">
+        <div className="featured-content container my-20 flex flex-col gap-16">
+          <div className="text-center flex flex-col gap-6">
+            <h6 className="text-accent">Practice Advice</h6>
+            <h2 className="text-txt">Featured Posts</h2>
+            <p className="text-secondTxt">
+              Problems trying to resolve the conflict between
+              <br />
+              the two major realms of Classical physics: Newtonian mechanics.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-3">
+            <BlogCard imgSrc="../assets/images/blog/card1.jpg" />
+            <BlogCard imgSrc="../assets/images/blog/card2.jpg" />
+            <BlogCard imgSrc="../assets/images/blog/card3.jpg" />
           </div>
         </div>
       </section>
