@@ -10,10 +10,18 @@ import {
   Youtube,
   Facebook,
   Heart,
+  X,
 } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  const [menuOpen, setMenuUpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuUpen((prevState) => !prevState);
+  };
+
   return (
     <header>
       <div className="navbar-solid hidden md:flex bg-primary text-white items-center justify-between px-14">
@@ -45,7 +53,13 @@ export default function Header() {
           <User size={30} className="text-txt" />
           <Search size={30} className="text-txt" />
           <ShoppingCart size={30} className="text-txt" />
-          <Menu size={30} className="text-txt" />
+          <button onClick={toggleMenu} aria-label="Toggle Menu">
+            {menuOpen ? (
+              <X size={30} className="text-txt" />
+            ) : (
+              <Menu size={30} className="text-txt" />
+            )}
+          </button>
         </div>
         <nav className="hidden md:block">
           <ul className="md:flex text-secondTxt gap-8 items-center md:flex-row">
@@ -81,40 +95,62 @@ export default function Header() {
           <Heart size={18} />
         </div>
       </div>
-      <nav>
-        <ul className="md:hidden text-secondTxt flex flex-col gap-8 items-center py-24 md:flex-row">
-          <li>
-            <Link to="/" className="mobile-menu">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link className="mobile-menu font-semibold" to="/">
-              Shop
-            </Link>
-          </li>
-          <li>
-            <Link className="mobile-menu font-semibold" to="/">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="mobile-menu font-semibold" to="/">
-              Blog
-            </Link>
-          </li>
-          <li>
-            <Link className="mobile-menu font-semibold" to="/">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link className="mobile-menu font-semibold" to="/">
-              Pages
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      {menuOpen && (
+        <nav className="md:hidden">
+          <ul className="text-secondTxt flex flex-col gap-8 items-center py-24">
+            <li>
+              <Link to="/" className="mobile-menu" onClick={toggleMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="mobile-menu font-semibold"
+                to="/"
+                onClick={toggleMenu}
+              >
+                Shop
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="mobile-menu font-semibold"
+                to="/"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="mobile-menu font-semibold"
+                to="/"
+                onClick={toggleMenu}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="mobile-menu font-semibold"
+                to="/"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="mobile-menu font-semibold"
+                to="/"
+                onClick={toggleMenu}
+              >
+                Pages
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }
