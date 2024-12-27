@@ -6,7 +6,7 @@ import Button from '@/components/Button/Button';
 export default function Footer() {
   return (
     <footer>
-      <div className="bg-[#FAFAFA]">
+      <div>
         <div className="container flex flex-col md:flex-row justify-between items-center py-12 gap-y-8">
           <img src="../assets/images/logo.png" alt="logo" className="w-28" />
           <div className="flex gap-6">
