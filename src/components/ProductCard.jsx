@@ -11,8 +11,8 @@ export default function ProductCard({ imgSrc }) {
           src={imgSrc ? imgSrc : placeholder}
         />
         <div className="py-6 flex flex-col gap-y-4">
-          <h5 className="text-txt">Graphic Design</h5>
-          <Link to="/" className="text-secondTxt">
+          <h5 className="text-txt text-center">Graphic Design</h5>
+          <Link to="/" className="text-secondTxt text-center">
             English Department
           </Link>
           <div className="price flex gap-x-4 justify-center">
