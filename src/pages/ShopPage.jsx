@@ -129,7 +129,7 @@ export default function ShopPage() {
       </section>
       <section>
         <div className="bg-[#FAFAFA] py-12">
-          <div className="container flex flex-col md:flex-row items-center justify-between">
+          <div className="container flex flex-col gap-y-14 md:flex-row items-center justify-between">
             <BrandsLogo
               imgSrc="../../assets/images/brands/fedex.png"
               url="https://www.fedex.com/"
