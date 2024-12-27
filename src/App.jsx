@@ -3,6 +3,7 @@ import Header from './layouts/Header';
 import PageContent from './layouts/PageContent';
 import HomePage from './pages/HomePage';
 import Footer from './layouts/Footer';
+import ShopPage from './pages/ShopPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <PageContent>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/shop" element={<ShopPage />} />
         </Routes>
       </PageContent>
       <Footer />
