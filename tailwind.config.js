@@ -20,6 +20,11 @@ export default {
         heroBg2: "url('../../assets/images/hero/hero2.jpg')",
         heroBg3: "url('../../assets/images/hero/hero3.jpg')",
         heroBg4: "url('../../assets/images/hero/hero4.jpg')",
+        CategoryCard1: "url('../../assets/images/shop/shopCard1.jpg')",
+        CategoryCard2: "url('../../assets/images/shop/shopCard2.jpg')",
+        CategoryCard3: "url('../../assets/images/shop/shopCard3.jpg')",
+        CategoryCard4: "url('../../assets/images/shop/shopCard4.jpg')",
+        CategoryCard5: "url('../../assets/images/shop/shopCard5.jpg')",
       },
 
       fontFamily: {
@@ -33,5 +38,15 @@ export default {
     },
   },
   plugins: [tailwindcssAnimate],
-  safelist: ['bg-heroBg1', 'bg-heroBg2', 'bg-heroBg3', 'bg-heroBg4'],
+  safelist: [
+    'bg-heroBg1',
+    'bg-heroBg2',
+    'bg-heroBg3',
+    'bg-heroBg4',
+    'bg-CategoryCard1',
+    'bg-CategoryCard2',
+    'bg-CategoryCard3',
+    'bg-CategoryCard4',
+    'bg-CategoryCard5',
+  ],
 };
